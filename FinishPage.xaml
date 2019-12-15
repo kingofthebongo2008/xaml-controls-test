@@ -8,28 +8,67 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <!-- Use a collection view source for content that presents itself as a list of items that can be grouped or sorted.  Otherwise, you can use x:Bind
+        directly on the GridView's item source to for further optimization. Please see the AppUIBasics sample for an example of how to do this.  -->
+        <CollectionViewSource x:Name="ContactsCVS"  IsSourceGrouped="True" />
+
+        <!--#region DataTemplate-->
+        <!-- When using x:Bind, you need to set x:DataType -->
+        <DataTemplate x:Name="ContactGridViewTemplate" x:DataType="data:Contact">
+            <StackPanel Orientation="Vertical">
+                <Ellipse x:Name="Ellipse" 
+                             Width ="140"
+                             Height="140"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                             Fill="LightGray"
+                             Margin="4,4,4,4"/>
+                <!-- Phase 2: TextBlock with contact name-->
+                <TextBlock x:Name="ContactName" 
+                               Margin="4,4,0,4"
+                               Text="{x:Bind Name}" 
+                               x:Phase="2" 
+                               Style="{ThemeResource BodyTextBlockStyle}" 
+                               HorizontalAlignment="Center"/>
+                <!-- Phase 3: TextBlock with contact job title-->
+                <TextBlock x:Name="Position" 
+                               Text="{x:Bind Position}" 
+                               Margin="4,4,0,4"
+                               x:Phase="3" 
+                               Style="{ThemeResource BodyTextBlockStyle}"
+                               FontSize="12"
+                               Foreground="Gray"
+                               HorizontalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+        <!--#endregion-->
+    </Page.Resources>
+
     <StackPanel>
+        
         <Grid x:Name="LayoutRoot">
-            
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <TextBlock x:Name="InputTextBlock1" Grid.Row="0" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,0,0,15">
-                When communicating with a web service that requires a single language to be specified,
-            </TextBlock>
-            
-            <TextBlock x:Name="InputTextBlock2" Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,0,0,15">
-                This achieves appropriate language matching, consistent fallback across the user's
-            </TextBlock>
-            
-            <TextBlock x:Name="InputTextBlock3" Grid.Row="2" TextWrapping="Wrap" HorizontalAlignment="Left">
-                Click the button below to determine the url for the web service.
-            </TextBlock>
-            
-            
+
+            <Grid.ColumnDefinitions> 
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="0" Grid.Column="0"/>
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="1" Grid.Column="0"/>
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="2" Grid.Column="0"/>
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="3" Grid.Column="0"/>
+
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="0" Grid.Column="1"/>
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="1" Grid.Column="1"/>
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="2" Grid.Column="2"/>
+            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="3" Grid.Column="3"/>
+
         </Grid>
     </StackPanel>
 
