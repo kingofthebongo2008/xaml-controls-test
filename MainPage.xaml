@@ -8,90 +8,109 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
 
-    <muxc:NavigationView x:Name="nvSample"
-    IsSettingsVisible="False"
-    IsBackButtonVisible="Auto"
-    IsBackEnabled="True"
-    SelectionChanged="NavigationView_SelectionChanged"
-    Header="Sample Page 1"
-    AlwaysShowHeader="False"
-    PaneTitle="Pane Title"
-    PaneDisplayMode="Left" 
-    ExpandedModeThresholdWidth="500"
-    SelectionFollowsFocus="Disabled"
-    IsTabStop="False">
 
-        <muxc:NavigationView.MenuItems>
-            <muxc:NavigationViewItem Content="Designs" Tag="Designs" x:Name="Designs" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/designs-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Select" Tag="Select" x:Name="Select" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/select-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Trees" Tag="Trees" x:Name="Trees" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/trees-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Items" Tag="Items" x:Name="Items" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/items-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Lights" Tag="Lights" x:Name="Lights" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/lights-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Views" Tag="Views" x:Name="Views" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/views-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Skies" Tag="Skies" x:Name="Skies" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/skies-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Finish" Tag="Finish" x:Name="Finish" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/finish-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Paint" Tag="Paint" x:Name="Paint" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
-
-            <muxc:NavigationViewItem Content="Publish" Tag="Publish" x:Name="Publish" SelectsOnInvoked="True">
-                <muxc:NavigationViewItem.Icon>
-                    <BitmapIcon UriSource="ms-appx:///Assets/publish-88x88.png"/>
-                </muxc:NavigationViewItem.Icon>
-            </muxc:NavigationViewItem>
+    <SplitView IsPaneOpen="True"
+           DisplayMode="Inline"
+           OpenPaneLength="296">
+        <SplitView.Pane>
             
-        </muxc:NavigationView.MenuItems>
-        
-        
-        <Frame x:Name="ContentFrame" Margin="24">
-            <Frame.ContentTransitions>
-                <TransitionCollection>
-                    <NavigationThemeTransition/>
-                </TransitionCollection>
-            </Frame.ContentTransitions>
-        </Frame>
-        
-    </muxc:NavigationView>
+            <muxc:NavigationView x:Name="nvSample"
+            IsSettingsVisible="False"
+            IsBackButtonVisible="Auto"
+            IsBackEnabled="True"
+            SelectionChanged="NavigationView_SelectionChanged"
+            Header="Sample Page 1"
+            AlwaysShowHeader="False"
+            PaneTitle="Pane Title"
+            PaneDisplayMode="Left" 
+            ExpandedModeThresholdWidth="500"
+            SelectionFollowsFocus="Disabled"
+            IsTabStop="False">
+
+                <muxc:NavigationView.MenuItems>
+                    <muxc:NavigationViewItem Content="Designs" Tag="Designs" x:Name="Designs" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/designs-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Select" Tag="Select" x:Name="Select" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/select-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Trees" Tag="Trees" x:Name="Trees" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/trees-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Items" Tag="Items" x:Name="Items" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/items-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Lights" Tag="Lights" x:Name="Lights" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/lights-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Views" Tag="Views" x:Name="Views" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/views-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Skies" Tag="Skies" x:Name="Skies" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/skies-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Finish" Tag="Finish" x:Name="Finish" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/finish-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Paint" Tag="Paint" x:Name="Paint" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+
+                    <muxc:NavigationViewItem Content="Publish" Tag="Publish" x:Name="Publish" SelectsOnInvoked="True">
+                        <muxc:NavigationViewItem.Icon>
+                            <BitmapIcon UriSource="ms-appx:///Assets/publish-88x88.png"/>
+                        </muxc:NavigationViewItem.Icon>
+                    </muxc:NavigationViewItem>
+                    
+                </muxc:NavigationView.MenuItems>
+
+                <Frame x:Name="ContentFrame" Margin="24">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition/>
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+
+            </muxc:NavigationView>
+            
+
+        </SplitView.Pane>
+
+        <Grid>
+            <TextBlock Text="Content"
+                   FontSize="24"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+        </Grid>
+    </SplitView>
+    
+
+
 </Page>
