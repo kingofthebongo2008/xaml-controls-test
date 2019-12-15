@@ -1,0 +1,11 @@
+x86/
+x64/
+.vs/
+*.vs
+*.opendb
+*.db
+*.dmp
+*.suo
+*.lib
+Generated Files/
+packages/
