@@ -123,6 +123,15 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\finish-88x88.png" />
+    <Image Include="Assets\publish-88x88.png" />
+    <Image Include="Assets\paint-88x88.png" />
+    <Image Include="Assets\skies-88x88.png" />
+    <Image Include="Assets\views-88x88.png" />
+    <Image Include="Assets\lights-88x88.png" />
+    <Image Include="Assets\items-88x88.png" />
+    <Image Include="Assets\trees-88x88.png" />
+    <Image Include="Assets\select-88x88.png" />
+    <Image Include="Assets\designs-88x88.png" />
     <Image Include="Assets\LockScreenLogo.scale-200.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
     <Image Include="Assets\Square150x150Logo.scale-200.png" />
