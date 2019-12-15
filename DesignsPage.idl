@@ -1,0 +1,9 @@
+namespace App1
+{
+    [default_interface]
+    runtimeclass DesignsPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        DesignsPage();
+        Int32 MyProperty;
+    }
+}

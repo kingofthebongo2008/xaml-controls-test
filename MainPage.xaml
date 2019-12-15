@@ -97,14 +97,14 @@
                         </TransitionCollection>
                     </Frame.ContentTransitions>
                 </Frame>
-
+                
             </muxc:NavigationView>
             
 
         </SplitView.Pane>
 
         <Grid>
-            <TextBlock Text="Content"
+            <TextBlock Text="DirectX 12"
                    FontSize="24"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>

@@ -104,6 +104,9 @@
     <ClInclude Include="FinishPage.h">
       <DependentUpon>FinishPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="DesignsPage.h">
+      <DependentUpon>DesignsPage.xaml</DependentUpon>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -113,6 +116,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="FinishPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DesignsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -153,6 +159,9 @@
     <ClCompile Include="FinishPage.cpp">
       <DependentUpon>FinishPage.xaml</DependentUpon>
     </ClCompile>
+    <ClCompile Include="DesignsPage.cpp">
+      <DependentUpon>DesignsPage.xaml</DependentUpon>
+    </ClCompile>
     <ClCompile Include="XamlMetaDataProvider.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
@@ -165,6 +174,9 @@
     </Midl>
     <Midl Include="FinishPage.idl">
       <DependentUpon>FinishPage.xaml</DependentUpon>
+    </Midl>
+    <Midl Include="DesignsPage.idl">
+      <DependentUpon>DesignsPage.xaml</DependentUpon>
     </Midl>
     <Midl Include="XamlMetaDataProvider.idl" />
   </ItemGroup>
