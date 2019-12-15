@@ -9,10 +9,28 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <TextBlock Text="Description:"/>
-        <TextBlock TextWrapping="Wrap">
-                Creates and shows a secondary window as an AppWindow. This secondary window is on the same UI thread as the main view.
-        </TextBlock>
+        <Grid x:Name="LayoutRoot">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock x:Name="InputTextBlock1" Grid.Row="0" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,0,0,15">
+                When communicating with a web service that requires a single language to be specified,
+            </TextBlock>
+            
+            <TextBlock x:Name="InputTextBlock2" Grid.Row="1" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="0,0,0,15">
+                This achieves appropriate language matching, consistent fallback across the user's
+            </TextBlock>
+            
+            <TextBlock x:Name="InputTextBlock3" Grid.Row="2" TextWrapping="Wrap" HorizontalAlignment="Left">
+                Click the button below to determine the url for the web service.
+            </TextBlock>
+            
+            
+        </Grid>
     </StackPanel>
 
 </Page>
