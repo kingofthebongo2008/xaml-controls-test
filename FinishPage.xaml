@@ -12,8 +12,8 @@
         
         <!-- Use a collection view source for content that presents itself as a list of items that can be grouped or sorted.  Otherwise, you can use x:Bind
         directly on the GridView's item source to for further optimization. Please see the AppUIBasics sample for an example of how to do this.  -->
-        <CollectionViewSource x:Name="ContactsCVS"  IsSourceGrouped="True" />
-
+        <CollectionViewSource x:Name="Items"  IsSourceGrouped="True" Source="{x:Bind ViewModel.Items}" />
+        
         <!--#region DataTemplate-->
         <!-- When using x:Bind, you need to set x:DataType -->
         <DataTemplate x:Name="ItemTemplate" x:DataType="local:Item">
@@ -34,27 +34,24 @@
     <StackPanel>
         
         <Grid x:Name="LayoutRoot">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions> 
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="0" Grid.Column="0"/>
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="1" Grid.Column="0"/>
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="2" Grid.Column="0"/>
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="3" Grid.Column="0"/>
-
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="0" Grid.Column="1"/>
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="1" Grid.Column="1"/>
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="2" Grid.Column="2"/>
-            <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png" Grid.Row="3" Grid.Column="3"/>
-
+            <ListView ItemsSource="{x:Bind ViewModel.Items}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:Item">
+                        <StackPanel>
+                            
+                        <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png"/>
+                            
+                            <TextBlock x:Name="ContactName" 
+                                Margin="4,4,0,4"
+                               Text="{x:Bind Name}"
+                               x:Phase="2" 
+                               Style="{ThemeResource BodyTextBlockStyle}" 
+                               HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </Grid>
     </StackPanel>
 

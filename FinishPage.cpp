@@ -12,8 +12,8 @@ namespace winrt::App1::implementation
         InitializeComponent();
     }
 
-    App1::ItemsViewModel FinishPage::Items() const
+    App1::ItemsViewModel FinishPage::ViewModel() const
     {
-        return m_Items;
+        return m_ViewModel;
     }
 }

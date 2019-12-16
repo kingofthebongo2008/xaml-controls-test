@@ -9,10 +9,10 @@ namespace winrt::App1::implementation
     {
         FinishPage();
 
-        App1::ItemsViewModel Items() const;
+        App1::ItemsViewModel ViewModel() const;
 
         private:
-        App1::ItemsViewModel m_Items;
+        App1::ItemsViewModel m_ViewModel;
     };
 }
 
