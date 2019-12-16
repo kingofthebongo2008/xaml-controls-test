@@ -13,6 +13,16 @@ namespace winrt::App1::implementation
         
     }
 
+    Windows::Foundation::Collections::IObservableVector<App1::Item> ItemsViewModel::Items() const
+    {
+        return {};
+    }
+
+    void ItemsViewModel::Items( Windows::Foundation::Collections::IObservableVector<App1::Item>& )
+    {
+
+    }
+
     Item::Item()
     {
 

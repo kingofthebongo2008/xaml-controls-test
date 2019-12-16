@@ -25,7 +25,7 @@
                                Style="{ThemeResource BodyTextBlockStyle}" 
                                HorizontalAlignment="Center"/>
                 <TextBlock x:Name="Position" 
-                               Text="{x:Bind Position}" 
+                               Text="{x:Bind Asset}" 
                                Margin="4,4,0,4"
                                x:Phase="3" 
                                Style="{ThemeResource BodyTextBlockStyle}"

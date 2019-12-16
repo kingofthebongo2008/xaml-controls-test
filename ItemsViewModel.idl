@@ -5,13 +5,14 @@ namespace App1
     {
         Item();
         String Name;
-        String Position;
+        String Asset;
     }
     
     [default_interface]
     runtimeclass ItemsViewModel
     {
         ItemsViewModel();
-        //Windows::Foundation::Collections::IObservableVector<Item> Items();
+
+        Windows.Foundation.Collections.IObservableVector<Item> Items();
     }
 }
