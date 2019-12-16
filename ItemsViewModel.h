@@ -10,6 +10,11 @@ namespace winrt::App1::implementation
         ItemsViewModel();
      
         Windows::Foundation::Collections::IObservableVector<App1::Item> Items() const;
+
+        private:
+
+        Windows::Foundation::Collections::IObservableVector<App1::Item> m_Items;
+
     };
 
     struct Item : ItemT<Item>
@@ -18,10 +23,6 @@ namespace winrt::App1::implementation
 
         hstring Name()   const    { return to_hstring(L"Name"); }
         hstring Asset() const     { return to_hstring(L"Asset"); }
-
-
-
-
     };
 }
 

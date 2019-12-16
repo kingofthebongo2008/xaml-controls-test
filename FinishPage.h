@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include "FinishPage.g.h"
+#include "ItemsViewModel.g.h"
 
 namespace winrt::App1::implementation
 {
@@ -8,8 +9,10 @@ namespace winrt::App1::implementation
     {
         FinishPage();
 
-        int32_t MyProperty();
-        void MyProperty(int32_t value);
+        App1::ItemsViewModel Items() const;
+
+        private:
+        App1::ItemsViewModel m_Items;
     };
 }
 

@@ -10,12 +10,17 @@ namespace winrt::App1::implementation
 
     ItemsViewModel::ItemsViewModel()
     {
+        std::vector<App1::Item> items;
+
+        m_Items = single_threaded_observable_vector(std::move(items));
         
+        m_Items.Append(make<App1::implementation::Item>());
+        m_Items.Append(make<App1::implementation::Item>());
     }
 
     Windows::Foundation::Collections::IObservableVector<App1::Item> ItemsViewModel::Items() const
     {
-        return {};
+        return m_Items;
     }
 
     

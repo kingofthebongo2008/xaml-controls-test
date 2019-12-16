@@ -12,13 +12,8 @@ namespace winrt::App1::implementation
         InitializeComponent();
     }
 
-    int32_t FinishPage::MyProperty()
+    App1::ItemsViewModel FinishPage::Items() const
     {
-        throw hresult_not_implemented();
-    }
-
-    void FinishPage::MyProperty(int32_t /* value */)
-    {
-        throw hresult_not_implemented();
+        return m_Items;
     }
 }

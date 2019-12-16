@@ -1,9 +1,13 @@
+import "ItemsViewModel.idl";
+
+
 namespace App1
 {
     [default_interface]
     runtimeclass FinishPage : Microsoft.UI.Xaml.Controls.Page
     {
         FinishPage();
-        Int32 MyProperty;
+
+        ItemsViewModel Items{ get; };
     }
 }
