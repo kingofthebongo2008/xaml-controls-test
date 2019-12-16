@@ -18,10 +18,7 @@ namespace winrt::App1::implementation
         return {};
     }
 
-    void ItemsViewModel::Items( Windows::Foundation::Collections::IObservableVector<App1::Item>& )
-    {
-
-    }
+    
 
     Item::Item()
     {

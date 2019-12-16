@@ -24,14 +24,8 @@
                                x:Phase="2" 
                                Style="{ThemeResource BodyTextBlockStyle}" 
                                HorizontalAlignment="Center"/>
-                <TextBlock x:Name="Position" 
-                               Text="{x:Bind Asset}" 
-                               Margin="4,4,0,4"
-                               x:Phase="3" 
-                               Style="{ThemeResource BodyTextBlockStyle}"
-                               FontSize="12"
-                               Foreground="Gray"
-                               HorizontalAlignment="Center"/>
+
+                <BitmapIcon UriSource="ms-appx:///Assets/paint-88x88.png"/>
             </StackPanel>
         </DataTemplate>
         <!--#endregion-->
