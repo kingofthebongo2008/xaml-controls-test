@@ -1,0 +1,17 @@
+namespace App1
+{
+    [default_interface]
+    runtimeclass Item
+    {
+        Item();
+        String Name;
+        String Position;
+    }
+    
+    [default_interface]
+    runtimeclass ItemsViewModel
+    {
+        ItemsViewModel();
+        //Windows::Foundation::Collections::IObservableVector<Item> Items();
+    }
+}

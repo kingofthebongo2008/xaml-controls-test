@@ -9,29 +9,21 @@
     mc:Ignorable="d">
 
     <Page.Resources>
+        
         <!-- Use a collection view source for content that presents itself as a list of items that can be grouped or sorted.  Otherwise, you can use x:Bind
         directly on the GridView's item source to for further optimization. Please see the AppUIBasics sample for an example of how to do this.  -->
         <CollectionViewSource x:Name="ContactsCVS"  IsSourceGrouped="True" />
 
         <!--#region DataTemplate-->
         <!-- When using x:Bind, you need to set x:DataType -->
-        <DataTemplate x:Name="ContactGridViewTemplate" x:DataType="data:Contact">
+        <DataTemplate x:Name="ItemTemplate" x:DataType="local:Item">
             <StackPanel Orientation="Vertical">
-                <Ellipse x:Name="Ellipse" 
-                             Width ="140"
-                             Height="140"
-                             VerticalAlignment="Center"
-                             HorizontalAlignment="Center"
-                             Fill="LightGray"
-                             Margin="4,4,4,4"/>
-                <!-- Phase 2: TextBlock with contact name-->
                 <TextBlock x:Name="ContactName" 
                                Margin="4,4,0,4"
                                Text="{x:Bind Name}" 
                                x:Phase="2" 
                                Style="{ThemeResource BodyTextBlockStyle}" 
                                HorizontalAlignment="Center"/>
-                <!-- Phase 3: TextBlock with contact job title-->
                 <TextBlock x:Name="Position" 
                                Text="{x:Bind Position}" 
                                Margin="4,4,0,4"

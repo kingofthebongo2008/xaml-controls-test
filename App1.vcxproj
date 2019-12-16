@@ -107,6 +107,9 @@
     <ClInclude Include="DesignsPage.h">
       <DependentUpon>DesignsPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="ItemsViewModel.h">
+      <DependentUpon>ItemsViewModel.idl</DependentUpon>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -162,6 +165,11 @@
     <ClCompile Include="DesignsPage.cpp">
       <DependentUpon>DesignsPage.xaml</DependentUpon>
     </ClCompile>
+
+    <ClCompile Include="ItemsViewModel.cpp">
+      <DependentUpon>ItemsViewModel.idl</DependentUpon>
+    </ClCompile>
+
     <ClCompile Include="XamlMetaDataProvider.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
@@ -178,6 +186,10 @@
     <Midl Include="DesignsPage.idl">
       <DependentUpon>DesignsPage.xaml</DependentUpon>
     </Midl>
+
+    <Midl Include="ItemsViewModel.idl">
+    </Midl>
+
     <Midl Include="XamlMetaDataProvider.idl" />
   </ItemGroup>
   <ItemGroup>
